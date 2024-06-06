@@ -20,7 +20,7 @@ const Main = () => {
     <div className="main">
       <div className="nav">
         <p>HansAI</p>
-        <img src={assets.user_icon} alt="user" />
+        <img src={assets.user_icon1} alt="user" />
       </div>
       <div className="main-container">
         {!showResult ? (
@@ -53,7 +53,7 @@ const Main = () => {
         ) : (
           <div className="result">
             <div className="result-title">
-              <img src={assets.user_icon} alt="" />
+              <img src={assets.user_icon1} alt="" />
               <p>{recentPrompt}</p>
             </div>
             <div className="result-data">
@@ -87,8 +87,8 @@ const Main = () => {
           </div>
 
           <p className="bottom-info">
-            Geimini may display inaccurate info, including about people, so
-            double-cehck its response. Your privacy and Gemini Apps
+            HansAI may display inaccurate info, including about people, so
+            double-cehck its response. Your privacy and HansAI Apps
           </p>
         </div>
       </div>

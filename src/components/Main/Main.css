@@ -22,6 +22,10 @@
 .main-container{
     max-width: 900px;
     margin: auto;
+    /* gemini */
+    /* display: flex;
+    flex-direction: column; */
+    /*  */
 }
 
 .main .greet {
@@ -35,6 +39,7 @@
 .main .greet span{
     background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -75,12 +80,13 @@
 }
 
 .main-bottom {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     max-width: 900px;
     padding: 0px 20px;
     margin: auto;
+    background: white;
 }
 
 .search-box{
@@ -91,6 +97,7 @@
     background-color: #f0f4f9;
     padding: 10px 20px;
     border-radius: 50px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 .search-box img{
     width: 24px;
@@ -99,7 +106,7 @@
 
 .search-box input{
     flex: 1;
-    background-color: transparent;
+    background: transparent;
     border: none;
     outline: none;
     padding: 8px;
@@ -119,4 +126,94 @@
     font-weight: 300;
 }
 
+.result{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
 
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.resul-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+
+/* .result-data p {
+    border: 1px solid red;
+    background-color: yellow;
+  } */
+  
+
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background-color: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+}
+
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+
+@keyfarmes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+.resul-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@media (max-width:600px){
+    .main-buttom input{
+        flex: none;
+        width: 150px;
+    } 
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+}
